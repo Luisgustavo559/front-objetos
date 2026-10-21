@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão front</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header role ="banner" class="bg-primary text-white text-center py-5 mb-4 shadow">
+        <h1>TechFleet Terminal -Mapeamento 00</h1>
+        <p class ="mb-0">gerenciamento de veiculos orinetado e objetos </p>
+    </header>
+
+    <main role ="main" class="container">
+        
+        <div class="row g-4" >
+            
+            <section class="cold-md-5">
+                 <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-white font - weight-bold">
+                        cadastrar novo veiculo
+                    </div>
+                     
+                    <div class="card-body">
+                        <form id ="form-vceiculo">
+                            <div class="mb-3">
+                                <label for="placa" class="form-label">Placado veiculo:</label>
+                                <input type="text" class="form-control min-44" id="placa" placeholder="Ex: ABC-1234" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="modelo" class="form-label">Modelo/Marca:</label>
+                                <input type="text" class="form-control min-44" id="modelo" placeholder="Ex: Vans Cargo 2.0" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoria:</label>
+                                <select class="form-control min-44" id="categoria" required>
+                                    <option value="Transporte">Transporte de Carga</option>
+                                    <option value="Manutenção">Manutenção Tecnica</option>
+                                    <option value="Inspeção">Inspeção de Camppo</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 min-44 font -weight-bold">Instanciar e Salvar Veiculo</button>
+                        </form>
+                    </div>
+            </section>
+
+            <section class="col-md-7">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+                        <span>Frota Ativa de Veículos</span>
+                        <span id="contador-frota" class="badge bg-warning text-dark">0 Veículos</span>
+                    </div>
+                    <div class="card-body">
+                        <div id="container-veiculos" class="row g-3">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
